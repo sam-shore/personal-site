@@ -3,8 +3,8 @@ import PostDetailsCard from '~/components/PostDetailsCard'
 import { DesignDetailsPostSummary } from '~/data/appDissections'
 import Link from 'next/link'
 
+
 export default function PostDetailsGrid({ posts }) {
-  console.log(posts)
 
   if (!posts || posts.length === 0) return null
   return (

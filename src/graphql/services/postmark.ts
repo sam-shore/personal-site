@@ -1,12 +1,10 @@
 import * as postmark from 'postmark'
-import { HNPost } from '~/pages/hn'
 
 export const client = new postmark.ServerClient(process.env.POSTMARK_CLIENT_ID)
 
 interface HNDigestProps {
   email: string
   date: string
-  posts: HNPost[]
   unsubscribe_url: string
 }
 

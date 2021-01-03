@@ -18,6 +18,7 @@ export const getAllPosts = async () => {
 
 export async function getStaticProps() {
   const firstPosts = await getAllPosts()
+  
   const posts = await firstPosts.sort(function(a, b){
     if(a.date > b.date) { return -1; }
     if(a.date < b.date) { return 1; }

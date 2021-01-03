@@ -16,13 +16,12 @@ import "react-notion/src/styles.css";
 
 import { getAllPosts } from './index'
 
-export async function getStaticProps({ params: { slug } }) {
+export async function getServerSideProps({ params: { slug } }) {
     // Get all posts again
     const posts = await getAllPosts();
 
-    // Find the current blogpost by slug
-    const post = posts.find((t) => t.slug === slug);
-
+    const post = await posts.find((t) => t.slug === slug);
+    
     const blocks = await fetch(`https://notion-api.splitbee.io/v1/page/${post.id}`).then((res) => res.json());
 
     return {
@@ -31,14 +30,6 @@ export async function getStaticProps({ params: { slug } }) {
             post,
         },
     };
-}
-
-export async function getStaticPaths() {
-  const posts = await getAllPosts();
-  return {
-      paths: posts.map((row) => `/writing/${row.slug}`),
-      fallback: true,
-  };
 }
 
 
@@ -56,17 +47,17 @@ export default function Writing({ post, blocks }) {
     return (
       <Page>
         <NextSeo
-          title={`${post.title} · App Dissection`}
+          title={`${post.title} · Writing`}
           description={post.description}
           openGraph={{
-            url: `https://brianlovin.com/design-details/${post.slug}`,
+            url: `https://samjshore.com/writing/${post.slug}`,
             title: post.title,
             description: removeMd(post.description),
-            site_name: 'App Dissection',
+            site_name: 'Writing',
             images: [
               {
-                url: 'https://brianlovin.com/static/meta/app-dissection.png',
-                alt: 'App Dissection',
+                url: 'https://samjshore.com/static/meta/writing.png',
+                alt: 'Writing',
               },
             ],
           }}
