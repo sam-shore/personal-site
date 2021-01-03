@@ -1,0 +1,13 @@
+{
+  "name": "Sam Shore",
+  "short_name": "Sam Shore",
+  "icons": [
+    {
+      "src": "/static/meta/apple-touch-icon.png",
+      "sizes": "512x512"
+    }
+  ],
+  "theme_color": "#ffffff",
+  "background_color": "#ffffff",
+  "display": "standalone"
+}
