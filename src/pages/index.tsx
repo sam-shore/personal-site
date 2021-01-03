@@ -38,7 +38,7 @@ export default function Home({ posts }) {
           <div className="flex flex-col space-y-8 md:items-center">
             <PageHeader
               title="Hey I'm Sam!"
-              subtitle="I am a designer, writer, and the co-founder of Wavium and Astral. Welcome to online home!"
+              subtitle="I am a designer, writer, and the co-founder of Wavium and Astral. Welcome to my online home!"
             />
 
             <div className="flex flex-col space-y-2 md:space-x-4 md:flex-row md:space-y-0 md:items-center md:justify-center">
