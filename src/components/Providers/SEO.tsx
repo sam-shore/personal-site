@@ -4,23 +4,23 @@ import { useRouter } from 'next/router'
 import { DefaultSeo } from 'next-seo'
 
 const SeoConfig = {
-  title: 'Brian Lovin',
-  description: 'Product designer',
+  title: 'Sam Shore',
+  description: 'Founder & Designer',
   openGraph: {
     type: 'website',
     locale: 'en_US',
-    url: 'https://brianlovin.com',
-    site_name: 'Brian Lovin',
+    url: 'https://samjshore.com',
+    site_name: 'Sam Shore',
     images: [
       {
-        url: 'https://brianlovin.com/static/meta/og-image.png',
-        alt: 'Brian Lovin',
+        url: 'https://samjshore.com/static/meta/home.png',
+        alt: 'Sam Shore',
       },
     ],
   },
   twitter: {
-    handle: '@brian_lovin',
-    site: '@brian_lovin',
+    handle: '@samjshore',
+    site: '@samjshore',
     cardType: 'summary_large_image',
   },
 }
