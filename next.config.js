@@ -8,13 +8,6 @@ module.exports = withSourceMaps({
   images: {
     domains: ['pbs.twimg.com', 'store.storeimages.cdn-apple.com'],
   },
-  env: {
-    FATHOM_SITE_ID: process.env.FATHOM_SITE_ID,
-    FATHOM_CUSTOM_URL: process.env.FATHOM_CUSTOM_URL,
-    GHOST_API_KEY: process.env.GHOST_API_KEY,
-    SENTRY_DSN: process.env.SENTRY_DSN,
-    SIMPLECAST_V2_API_KEY: process.env.SIMPLECAST_V2_API_KEY,
-  },
   webpack: (config, { isServer }) => {
     config.resolve.alias['~'] = path.resolve('./src')
 
