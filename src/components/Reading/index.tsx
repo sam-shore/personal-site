@@ -2,19 +2,19 @@ import * as React from 'react'
 import Image from 'next/image'
 import data from './data'
 
-export default function InventoryList({ posts }) {
-  const sorted = data.sort(function (a, b) {
-    if (a.name.toLowerCase() < b.name.toLowerCase()) return -1
-    if (a.name.toLowerCase() > b.name.toLowerCase()) return 1
-    return 0
+export default function ReadingList({ posts }) {
+  const sortedPosts = posts.sort(function (a, b) {
+    if (a.date > b.date) { return -1; }
+    if (a.date < b.date) { return 1; }
+    return 0;
   })
 
   return (
     <div className="flex flex-col mt-16">
-      {posts.map((post) => {
+      {sortedPosts.map((post) => {
         console.log(post.tag)
         return (<>
-          {post.type === "Inventory" ?
+          {post.type === "Reading" ?
 
             <a
               key={post.title}
@@ -23,7 +23,7 @@ export default function InventoryList({ posts }) {
               target="_blank"
               rel="nooopener noreferrer"
             >
-{/*               <Image
+              {/*               <Image
                 src={`${post.imageUrl}`}
                 width={64}
                 height={64}
@@ -39,9 +39,28 @@ export default function InventoryList({ posts }) {
                   </p>
                 </div>
                 <div className="flex space-x-2">
-                  <span className="self-start px-3 py-0.5 text-xs font-medium leading-5 tracking-wide dark:text-green-400 dark:border-green-400 text-green-600 border border-green-600 rounded-full">
-                    {post.tag}
+
+                  {post.tag === "Book" ?
+
+                    <span className="self-start px-3 py-0.5 text-xs font-medium leading-5 tracking-wide dark:text-purple-400 dark:border-purple-400 text-purple-600 border border-purple-600 rounded-full">
+                      {post.tag}
+                    </span>
+
+                    :
+
+
+
+                    <span className="self-start px-3 py-0.5 text-xs font-medium leading-5 tracking-wide dark:text-green-400 dark:border-green-400 text-green-600 border border-green-600 rounded-full">
+                      {post.tag}
+                    </span>
+                  }
+
+
+                  {post.status === "Reading" ? <span className="self-start px-3 py-0.5 text-xs font-medium leading-5 tracking-wide dark:text-yellow-400 dark:yellow-purple-400 text-yellow-600 border border-yellow-600 rounded-full">
+                    In Progress
                   </span>
+                    : null}
+
                 </div>
               </div>
             </a>

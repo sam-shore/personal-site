@@ -100,7 +100,7 @@ export function January( {posts} ) {
   </TimelineEntry>
    : post.type === "Reading" ? 
    <TimelineEntry
-    title={`Read ${post.title}`}
+    title={<a>Read: <a href={post.link} target="_blank" className={"italic dark:text-blue-500 text-blue-500"}>{post.title}</a></a>}
     timestamp={post.date}
     Icon={Book}
     tint ={'blue'}

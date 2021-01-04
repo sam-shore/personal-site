@@ -1,6 +1,6 @@
 import * as React from 'react'
 import { NextSeo } from 'next-seo'
-import InventoryList from '~/components/Inventory'
+import ReadingList from '~/components/Reading'
 import Page, { PageHeader } from '~/components/Page'
 import { CenteredColumn } from '~/components/Layouts'
 import { Info } from 'react-feather'
@@ -25,28 +25,28 @@ export async function getStaticProps() {
   };
 }
 
-function Inventory({ posts }) {
+function Reading({ posts }) {
   return (
     <Page>
       <NextSeo
-        title={'Inventory'}
-        description={'My current inventory of products.'}
+        title={'Reading'}
+        description={"Articles and books that I'm reading."}
         openGraph={{
-          url: 'https://samjshore.com/inventory',
-          title: 'Inventory',
-          description: 'My current inventory of products.',
+          url: 'https://samjshore.com/reading',
+          title: 'Reading',
+          description: "Articles and books that I'm reading.",
           images: [
             {
-              url: 'https://samjshore.com/static/meta/inventory.png',
-              alt: 'My current inventory of products.',
+              url: 'https://samjshore.com/static/meta/reading.png',
+              alt: "Articles and books that I'm reading.",
             },
           ],
         }}
       />
       <CenteredColumn>
-        <PageHeader title="Inventory" subtitle="My current inventory of products." />
+        <PageHeader title="Reading" subtitle="Articles and books that I'm reading." />
 
-        <InventoryList posts={posts} />
+        <ReadingList posts={posts} />
 
         <div className="flex flex-col p-6 mt-16 space-y-3 bg-yellow-100 rounded-lg dark:bg-gray-900">
           <div className="flex items-center">
@@ -55,11 +55,11 @@ function Inventory({ posts }) {
               className="mr-3 text-yellow-900 dark:text-gray-100"
             />
             <p className="font-semibold text-yellow-900 dark:text-gray-100">
-              About my inventory
+              Have somehing you think I'd like to read?
             </p>
           </div>
           <p className="font-normal text-yellow-900 dark:text-gray-300">
-            These are the tools, products, and software that I use everyday. Whenever I buy something new I add it to my inventory.
+            Ping me at samshore@hey.com
           </p>
         </div>
       </CenteredColumn>
@@ -67,4 +67,4 @@ function Inventory({ posts }) {
   )
 }
 
-export default Inventory
+export default Reading

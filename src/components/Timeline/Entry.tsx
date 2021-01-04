@@ -2,9 +2,9 @@ import * as React from 'react'
 
 interface TimelineEntryProps {
   children?: React.ReactChild | React.ReactChild[]
-  title: string
+  title: any
   timestamp?: string
-  Icon?: any,
+  Icon?: any
   tint?: string
   divider?: boolean
 }
