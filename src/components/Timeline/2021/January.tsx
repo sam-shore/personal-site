@@ -139,7 +139,6 @@ export function January( {posts} ) {
               height="300"
               layout="responsive"
               className="rounded"
-              alt="Photo of Yosemite valley"
             />
             <Image
               src={`/static/img/4box/${post.photoLib}/2.png`}
@@ -147,7 +146,6 @@ export function January( {posts} ) {
               height="300"
               layout="responsive"
               className="rounded"
-              alt="Photo of Yosemite valley"
             />
             <Image
               src={`/static/img/4box/${post.photoLib}/3.png`}
@@ -155,7 +153,6 @@ export function January( {posts} ) {
               height="300"
               layout="responsive"
               className="rounded"
-              alt="Photo of Yosemite valley"
             />
             <Image
               src={`/static/img/4box/${post.photoLib}/4.png`}
@@ -163,7 +160,6 @@ export function January( {posts} ) {
               height="300"
               layout="responsive"
               className="rounded"
-              alt="Photo of Yosemite valley"
             />
           </div>
       </TimelineEntry>
