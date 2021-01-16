@@ -1,7 +1,8 @@
 import * as React from 'react'
 import { BlogPost } from '../BlogPost'
 import { ButtonSet, DateEntry, Notes, TimelineEntry } from '../Entry'
-import { Layers, Plus, Zap, List, Book } from 'react-feather'
+import Image from 'next/image'
+import { Layers, Plus, Zap, List, Book, Camera } from 'react-feather'
 
 
 export function January( {posts} ) {
@@ -123,6 +124,50 @@ export function January( {posts} ) {
       </ButtonSet> : null}
     </>
   </TimelineEntry>
+   : post.type === "Photos" ? 
+        
+   <TimelineEntry
+        title={post.title}
+        timestamp={post.date}
+        Icon={Camera}
+        tint="gray"
+      >
+          <div className="grid grid-cols-2 grid-rows-2 gap-2">
+            <Image
+              src={`/static/img/4box/${post.photoLib}/1.png`}
+              width="300"
+              height="300"
+              layout="responsive"
+              className="rounded"
+              alt="Photo of Yosemite valley"
+            />
+            <Image
+              src={`/static/img/4box/${post.photoLib}/2.png`}
+              width="300"
+              height="300"
+              layout="responsive"
+              className="rounded"
+              alt="Photo of Yosemite valley"
+            />
+            <Image
+              src={`/static/img/4box/${post.photoLib}/3.png`}
+              width="300"
+              height="300"
+              layout="responsive"
+              className="rounded"
+              alt="Photo of Yosemite valley"
+            />
+            <Image
+              src={`/static/img/4box/${post.photoLib}/4.png`}
+              width="300"
+              height="300"
+              layout="responsive"
+              className="rounded"
+              alt="Photo of Yosemite valley"
+            />
+          </div>
+      </TimelineEntry>
+        
    : null : null
     
     }
