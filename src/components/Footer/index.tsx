@@ -33,8 +33,8 @@ export function Footer() {
         </div>
 
         <div className="flex flex-col space-y-4">
-          <Link href="/inventory" as="/inventory" passHref>
-            <a className="black-link">Inventory</a>
+          <Link href="/reading" as="/reading" passHref>
+            <a className="black-link">Reading</a>
           </Link>
         </div>
       </div>
