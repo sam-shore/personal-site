@@ -3650,6 +3650,13 @@ axios@^0.19.2:
   dependencies:
     follow-redirects "1.5.10"
 
+axios@^0.21.1:
+  version "0.21.1"
+  resolved "https://registry.yarnpkg.com/axios/-/axios-0.21.1.tgz#22563481962f4d6bde9a76d516ef0e5d3c09b2b8"
+  integrity sha512-dKQiRHxGD9PPRIUNIWvZhPTPpl1rf/OxTYKsqKUDjBwYylTvV7SjSHJb9ratfyzM6wCdLCOYLzs73qpg5c4iGA==
+  dependencies:
+    follow-redirects "^1.10.0"
+
 babel-eslint@^10.1.0:
   version "10.1.0"
   resolved "https://registry.yarnpkg.com/babel-eslint/-/babel-eslint-10.1.0.tgz#6968e568a910b78fb3779cdd8b6ac2f479943232"
@@ -9798,12 +9805,12 @@ postcss@^8.1.6, postcss@^8.2.1, postcss@^8.2.2:
     nanoid "^3.1.20"
     source-map "^0.6.1"
 
-postmark@^2.6.1:
-  version "2.6.1"
-  resolved "https://registry.yarnpkg.com/postmark/-/postmark-2.6.1.tgz#65db8dbfe240349b65e3a4cc3c2ef3a6d1e96866"
-  integrity sha512-qvLiznIT2cYl9GFxSE8SFJkmX/r6As7swQaOioxMmjSmg6Osvspq292ojpsKXpjltToruBlF46rbA5l125gd3A==
+postmark@^2.7.1:
+  version "2.7.1"
+  resolved "https://registry.yarnpkg.com/postmark/-/postmark-2.7.1.tgz#752ea78b90a50059fcd14da7a78a7d70105d15c2"
+  integrity sha512-mevTZY8mZ2+DqBQweoUVsjlcsY2wu/WotDKplsFMiOy4mG7euOzmD4pqkWFymMVjeKbU52NZWEkO2Et1X0tdFw==
   dependencies:
-    axios "^0.19.2"
+    axios "^0.21.1"
 
 prebuild-install@^5.3.5:
   version "5.3.6"
