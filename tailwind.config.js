@@ -13,6 +13,7 @@ module.exports = {
       green: colors.green,
       pink: colors.pink,
       indigo: colors.indigo,
+      emerald: colors.emerald,
       white: '#fff',
     },
     lineClamp: {
@@ -21,6 +22,9 @@ module.exports = {
       3: 3,
     },
     extend: {
+      zIndex: {
+        '-10': '-10',
+       },
       typography: (theme) => ({
         DEFAULT: {
           css: {

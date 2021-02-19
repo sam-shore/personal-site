@@ -29,7 +29,7 @@ export function BlogPost({
       timestamp={timestamp}
       divider={divider}
     >
-      <Link passHref href={`/writing/${slug}`}>
+      <Link passHref href={`/notebook/${slug}`}>
         <a className="px-4 py-3 transition-shadow bg-white rounded-md shadow dark:bg-gray-900 hover:shadow-cardHover">
           <div className="flex flex-col space-y-4">
             <div className="flex flex-col space-y-1">

@@ -4,7 +4,6 @@ import ReadingList from '~/components/Reading'
 import Page, { PageHeader } from '~/components/Page'
 import { CenteredColumn } from '~/components/Layouts'
 import { Info } from 'react-feather'
-import Recommendations from '~/components/Stack/Recommendations'
 
 const NOTION_BLOG_ID = '4b80c7b0e00741399368cd28574de010'
 

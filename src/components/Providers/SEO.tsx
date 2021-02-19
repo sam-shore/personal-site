@@ -28,11 +28,8 @@ const SeoConfig = {
 export default function SEO() {
   const router = useRouter()
 
-  let emoji = '👾'
-  if (router.route.indexOf('/about') === 0) emoji = '👋'
-  if (router.route.indexOf('/overthought') === 0) emoji = '🤔'
-  if (router.route.indexOf('/design-details') === 0) emoji = '✨'
-  if (router.route.indexOf('/bookmarks') === 0) emoji = '📖'
+  let emoji = '💫'
+  if (router.route.indexOf('/notebook') === 0) emoji = '📚'
 
   return (
     <React.Fragment>

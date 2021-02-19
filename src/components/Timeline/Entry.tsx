@@ -33,7 +33,7 @@ function getTint(color: string) {
 
 export function Notes({ children }) {
   return (
-    <div className="-mt-2 prose timeline-inset prose-md text-primary">
+    <div className="-mt-2 prose timeline-inset prose-md text-primary text-white">
       {children}
     </div>
   )
@@ -78,8 +78,10 @@ export function TimelineEntry({
             <span className="text-sm text-tertiary">{timestamp}</span>
           )}
         </div>
-        <div className="flex flex-col space-y-4 timeline-full-width">
-          {children}
+        <div className="flex flex-col space-y-4 timeline-full-width text-white dark:text-white">
+          <div>
+            {children}
+          </div>
         </div>
       </div>
     </div>

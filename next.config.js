@@ -5,15 +5,8 @@ const withSourceMaps = require('@zeit/next-source-maps')()
 // })
 
 module.exports = withSourceMaps({
-  images: {
-    domains: ['pbs.twimg.com', 'store.storeimages.cdn-apple.com'],
-  },
   webpack: (config, { isServer }) => {
     config.resolve.alias['~'] = path.resolve('./src')
-
-    if (!isServer) {
-      config.resolve.alias['@sentry/node'] = '@sentry/browser'
-    }
 
     return config
   },

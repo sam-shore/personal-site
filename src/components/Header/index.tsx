@@ -24,23 +24,23 @@ const NavLinks = ({ activeRoute }: Props) => {
         </Link>
       </Label>
 
-      <Label isActive={activeRoute === 'About'}>
+     {/*  <Label isActive={activeRoute === 'About'}>
         <Link href="/about">
           <a>About</a>
         </Link>
-      </Label>
+      </Label> */}
 
-      <Label isActive={activeRoute === 'Writing'}>
-        <Link href="/writing">
-          <a>Writing</a>
+      <Label isActive={activeRoute === 'Notebook'}>
+        <Link href="/notebook">
+          <a>Notebook</a>
         </Link>
       </Label>
 
-      <Label isActive={activeRoute === 'Reading'}>
+      {/* <Label isActive={activeRoute === 'Reading'}>
         <Link href="/reading">
           <a>Reading</a>
         </Link>
-      </Label>
+      </Label> */}
 
       {/* <Label isActive={activeRoute === 'Security Checklist'}>
         <Link href="/security">
@@ -73,9 +73,9 @@ export default function Header() {
     activeRoute = 'Reading'
     activePath = '/reading'
   }
-  if (router.pathname.includes('/writing')) {
-    activeRoute = 'Writing'
-    activePath = '/writing'
+  if (router.pathname.includes('/notebook')) {
+    activeRoute = 'Notebook'
+    activePath = '/notebook'
   }
   if (router.pathname.includes('/ama')) {
     activeRoute = 'Ask Me Anything'

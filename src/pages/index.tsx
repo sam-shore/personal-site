@@ -1,46 +1,29 @@
 import * as React from 'react'
+import Image from 'next/image'
 import Link from 'next/link'
 import Page, { PageHeader } from '~/components/Page'
 import { CenteredColumn } from '~/components/Layouts'
-import { Timeline } from '~/components/Timeline'
+import Timeline from '~/components/Timeline'
+import groq from 'groq'
+import client from '../../client'
+import Projects from '~/components/Projects'
 
 
-const NOTION_BLOG_ID = '4b80c7b0e00741399368cd28574de010'
-
-export const getAllPosts = async () => {
-	return await fetch(
-    `https://notion-api.splitbee.io/v1/table/${NOTION_BLOG_ID}`
-  
-  ).then((res) => res.json());
-}
-
-export async function getStaticProps() {
-  const firstPosts = await getAllPosts()
-  const posts = await firstPosts.sort(function(a, b){
-    if(a.date > b.date) { return -1; }
-    if(a.date < b.date) { return 1; }
-    return 0;
-})
-
-  return {
-    props: {
-      posts
-    },
-  };
-}
-
-
-export default function Home({ posts }) {
+const Home = ({ posts, projects }) => {
   return (<>
     <Page>
       <CenteredColumn>
         <div className="flex flex-col space-y-24">
-          <div className="flex flex-col space-y-8 md:items-center">
-            <PageHeader
-              title="Hey I'm Sam!"
-              subtitle="I am a designer, writer, and the co-founder of Wavium and Astral. Welcome to my online home!"
-            />
-
+          <div className="flex flex-col space-y-8 items-center">
+            <div className="flex flex-col items-center text-center mb-24">
+              <img src="/static/img/me.png" className=" w-80 -mb-32" />
+              <h1 className=" text-9xl font-extrabold tracking-tight -z-10">Sam</h1>
+              <h1 className=" text-8xl -mt-4 font-extrabold tracking-tight">Shore</h1>
+              <p className="text-2xl mt-16 font-normal">Building a portfolio of wonderful internet businesses.</p>
+            </div>
+            <Projects projects={projects} />
+            
+{/* 
             <div className="flex flex-col space-y-2 md:space-x-4 md:flex-row md:space-y-0 md:items-center md:justify-center">
               <Link href="/about" passHref>
                 <a>
@@ -58,12 +41,24 @@ export default function Home({ posts }) {
                   Follow me on Twitter
                 </button>
               </a>
-            </div>
+            </div> */}
           </div>
 
-          <Timeline posts={posts}/>
+       {/*    <Timeline posts={posts} /> */}
         </div>
       </CenteredColumn>
     </Page>
   </>);
 }
+
+
+Home.getInitialProps = async () => ({
+  posts: await client.fetch(groq`
+    *[_type == "post" && publishedAt < now()]|order(publishedAt desc)
+  `),
+  projects: await client.fetch(groq`
+      *[_type == "project" && publishedAt < now()]|order(publishedAt desc)
+    `)
+})
+
+export default Home
