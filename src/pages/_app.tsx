@@ -1,6 +1,5 @@
 import * as React from 'react'
 import App from 'next/app'
-import Sentry from '~/sentry'
 import Providers from '~/components/Providers'
 import '~/styles/tailwind.css'
 import 'tailwindcss/utilities.css'
@@ -18,13 +17,6 @@ class MyApp extends App {
   }
 
   componentDidCatch(error, errorInfo) {
-    Sentry.withScope((scope) => {
-      Object.keys(errorInfo).forEach((key) => {
-        scope.setExtra(key, errorInfo[key])
-      })
-
-      Sentry.captureException(error)
-    })
 
     super.componentDidCatch(error, errorInfo)
   }

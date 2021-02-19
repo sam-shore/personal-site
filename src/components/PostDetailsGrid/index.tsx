@@ -1,6 +1,4 @@
 import * as React from 'react'
-import PostDetailsCard from '~/components/PostDetailsCard'
-import { DesignDetailsPostSummary } from '~/data/appDissections'
 import Link from 'next/link'
 
 

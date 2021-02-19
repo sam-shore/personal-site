@@ -3,22 +3,10 @@ import Image from 'next/image'
 import Link from 'next/link'
 import Page from '~/components/Page'
 import { CenteredColumn } from '~/components/Layouts'
-import { initApolloClient } from '~/graphql/services/apollo'
-import { GET_HOME } from '~/graphql/queries'
-import { Post, Episode, Repo } from '~/graphql/types.generated'
-import { DesignDetailsPostSummary, summaries } from '~/data/appDissections'
 import Divider from '~/components/Divider'
 
-interface Props {
-  data: {
-    posts: Post[]
-    episodes?: Episode[]
-    repos?: Repo[]
-  }
-  summaries: DesignDetailsPostSummary[]
-}
 
-function About({ data, summaries }: Props) {
+function About({ data, summaries }) {
   return (
     <Page>
       <CenteredColumn>

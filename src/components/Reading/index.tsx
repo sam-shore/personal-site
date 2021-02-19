@@ -1,6 +1,5 @@
 import * as React from 'react'
 import Image from 'next/image'
-import data from './data'
 
 export default function ReadingList({ posts }) {
   const sortedPosts = posts.sort(function (a, b) {
