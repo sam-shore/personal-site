@@ -2,16 +2,9 @@
   "name": "sam-shore-next",
   "version": "1.0.0",
   "scripts": {
-    "dev": "next",
+    "dev": "next dev",
     "build": "next build",
-    "start": "next start",
-    "lint": "eslint ./src/pages/* ./src/components/* ./src/api/* ./src/data/* ./src/graphql/* ./src/lib/* ./src/types/* -c .eslintrc.json --fix --ext ts,tsx",
-    "cypress:open": "cypress open",
-    "cypress:run": "cypress run",
-    "firebase": "cd src/firebase && firebase deploy --only functions && cd ../",
-    "generate": "graphql-codegen",
-    "generate:watch": "graphql-codegen --watch 'src/graphql/**/*.ts'",
-    "postinstall": "yarn generate"
+    "start": "next start"
   },
   "husky": {
     "hooks": {
