@@ -20,10 +20,10 @@ export default function PostDetailsGrid({ posts }) {
                           as={`/notebook/${slug.current}`}
                           passHref
                         >
-                          <a className="text-blue-600 dark:text-blue-500">{title}</a>
+                          <a className="text-gray-900 dark:text-white font-mono text-xl">{title}</a>
                         </Link>
-                        {description && <p className="clamp-2">{description}</p>}
-                        <p className="p-small">{new Date(_updatedAt).toDateString()}</p>
+                        {description && <p className="clamp-2 dark:text-gray-400 text-gray-600 font-light">{description}</p>}
+                          <p className="dark:text-gray-600 text-gray-400 text-sm">{new Date(_updatedAt).toDateString()}</p>
                       </div>
               </div>
             )

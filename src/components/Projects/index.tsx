@@ -23,10 +23,10 @@ export default function Projects({ projects }) {
                                 </div>
                                 <div className="flex flex-col space-y-1">
                                     <div className="flex flex-row items-center text-gray-900 space-x-2 dark:text-white">
-                                        <h2 className="text-2xl">{title}</h2>
+                                        <h2 className="text-2xl font-mono">{title}</h2>
                                         <div className={`px-2 py-1 bg-blue-500 bg-opacity-20 text-xs font-bold text-blue-500 rounded-full`}>{status}</div>
                                     </div>
-                                    <p className="text-base text-gray-500 dark:gray-300">{description}</p>
+                                    <p className="clamp-2 dark:text-gray-400 text-gray-600 font-light">{description}</p>
                                     <a href={url} target="_blank" className={`text-base text-blue-500`}>Check it out</a>
                                 </div>
                             </div>

@@ -37,7 +37,7 @@ const Index = ({ posts }: Props) => {
       <CenteredColumn>
         <div className="flex flex-col space-y-8">
           <div className="flex flex-col space-y-8 md:items-center md:text-center">
-            <h1 className="text-6xl md:text-8xl font-extrabold tracking-tight">Notebook</h1>
+            <h1 className=" font-mono text-6xl md:text-8xl font-extrabold tracking-tight">Notebook</h1>
             <p className="text-2xl">Explorations and learnings along the way.</p>
           </div>
           <PostDetailsGrid posts={posts} />

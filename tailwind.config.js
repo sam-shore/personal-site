@@ -1,4 +1,5 @@
 const colors = require('tailwindcss/colors')
+const defaultTheme = require('tailwindcss/defaultTheme')
 
 module.exports = {
   purge: ['./src/**/*.tsx'],
@@ -22,6 +23,9 @@ module.exports = {
       3: 3,
     },
     extend: {
+      /* fontFamily: {
+        mono: ['iAWriterQuattro', ...defaultTheme.fontFamily.sans],
+      }, */
       zIndex: {
         '-10': '-10',
        },

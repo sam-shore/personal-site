@@ -26,7 +26,7 @@ export function PageHeader(props: HeaderProps) {
   const { title, subtitle } = props
   return (
     <div className="flex flex-col space-y-2 md:items-center md:text-center">
-      <h1 className="text-4xl font-bold">{title}</h1>
+      <h1 className="text-4xl font-bold font-mono">{title}</h1>
       {subtitle && <p className="text-2xl">{subtitle}</p>}
     </div>
   )
