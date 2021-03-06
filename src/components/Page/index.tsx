@@ -10,8 +10,8 @@ export default function Page(props: Props) {
   const { children } = props
   return (
     <>
-   <Header />
-      <div className="px-4 py-32 lg:px-0">{children}</div>
+   {/* <Header /> */}
+      <div className="px-4 py-16 lg:px-0">{children}</div>
     <Footer />
     </>
   )
