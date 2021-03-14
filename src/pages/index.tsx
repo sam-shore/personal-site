@@ -36,7 +36,7 @@ const Index = ({ posts }: Props) => {
 
       <CenteredColumn>
         <div className={"mx-auto flex flex-row items-center justify-center mb-8 space-x-2"}>
-        <img src="https://pbs.twimg.com/profile_images/1364015106934341635/RFdTKNZq_400x400.jpg" className={"rounded-full w-8 h-8"} />
+        <img src="https://pbs.twimg.com/profile_images/1368958001785225217/x8T1C_nE_400x400.jpg" className={"rounded-full w-8 h-8"} />
         <h2 className={"font-semibold text-xl"}>Sam Shore</h2>
 
         </div>
